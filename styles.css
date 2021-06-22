@@ -1,0 +1,387 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  display: flex;
+}
+
+.header__button {
+  width: 50px;
+  flex-shrink: 0;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.icon-bar {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  margin-left: 1rem;
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.nav__links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 250px;
+  background: #ffffff;
+  transform: translateX(-250px);
+  transition: transform 0.3s;
+}
+
+.nav--open .nav__links {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 15px;
+}
+
+.nav__link > i {
+  margin-right: 15px;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav--open .nav__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trigger__icon:before {
+  content: '\f078';
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.trigger__icon.active:before {
+  content: '\f077';
+}
+
+.first__list {
+  background-color: #133774;
+  border-bottom: 1px solid #01102B;
+  color: #fff;
+}
+
+.first__list a {
+  color: #fff;
+  font-size: 15px;
+}
+
+.last__links a {
+  font-size: 14px;
+  color: #114097;
+}
+
+.last__links {
+  background-color: #EFEFEF;
+  border-bottom: #D5D5D5;
+}
+
+.first__list a, .last__links a {
+  font-weight: bold;
+}
+
+.sub__links a {
+  color: #fff;
+}
+
+.sub__links {
+  background-color: #6A6A6A;
+  border-bottom: 1px solid #818181;
+}
+
+.header, .nav__links {
+  display: none;
+}
+
+.sub__links {
+  display: none;
+}
+
+.sub__links.active {
+  display: block;
+}
+
+@media all and (max-width: 1023px) {
+  .header, .nav__links {
+    display: block;
+  }
+  .header {
+    margin-top: 1rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.call {
+  display: flex;
+}
+
+img {
+  display: inline;
+  width: 13%;
+  height: auto;
+}
+
+.updates {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.updates__read, .updates__login {
+  display: flex;
+  flex-direction: column;
+}
+
+.updates__read {
+  margin-bottom: 0.3rem;
+}
+
+.update__costumer, .read__more, .update__associates, .login {
+  padding: 1rem;
+}
+
+.update__costumer, .update__associates {
+  color: #fff;
+  font-weight: bold;
+  width: 95%;
+}
+
+.update__costumer {
+  background-color: #132597;
+}
+
+.update__associates {
+  background-color: #659AFF;
+}
+
+.read__more, .login {
+  background-color: #EDEDED;
+  color: #132597;
+  width: 95%;
+}
+
+@media (max-width: 767px){
+  .header {
+    width: auto;
+    position: relative;
+  }
+
+  .navbar {
+    box-shadow: rgb(0 0 0) 0 0 1px 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
+  }
+  .call {
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .call p {
+    color: #787878;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .call div:hover {
+    color: #002496;
+    text-decoration: underline;
+  }
+
+  .call img {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .call p.phone__number {
+    display: none;
+  }
+
+  .navbar__desktop, .second__navbar__desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar__desktop, .second__navbar__desktop {
+    display: none;
+  }
+  .questions {
+    display: none;
+  }
+  .header {
+    width: auto;
+    position: relative;
+  }
+
+  .navbar {
+    box-shadow: rgb(0 0 0) 0 0 1px 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
+  }
+
+  .call img {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .phone__number {
+    color: #787878;
+    font-size: 15px;
+  }
+
+  .phone__number:hover {
+    color: #002496;
+    text-decoration: underline;
+  }
+}
+
+  @media (min-width: 1024px) {
+    ul {
+      list-style: none;
+    }
+    .navbar {
+      display: none;
+    }
+
+    .social__icons .social {
+      width: 70%;
+      height: 65%;
+    }
+
+    .search img {
+      width: 45%;
+      height: 30%;
+    }
+
+    .trigger img {
+      width: 5%;
+      height: 50%;
+    }
+    /*.second__list__desktop li:last-child a {*/
+    /*  display: flex;*/
+    /*  justify-items: center;*/
+    /*}*/
+    .navbar__desktop {
+      background-color: #6A6A6A;
+    }
+
+    .navbar__content, .first__list__desktop, .second__list__desktop, .social__icons {
+      display: flex;
+      color: #fff;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .first__list__desktop a, .second__list__desktop a, .social__icons img {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+
+    .navbar__content, .second__navbar__desktop, .updates {
+      max-width: 1100px;
+      margin: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .second__navbar__desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .links__company {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 1rem;
+    }
+
+    .links__company a {
+      color: #666666;
+      text-decoration: none;
+
+    }
+
+    .updates {
+      margin-top: 0;
+    }
+
+    .updates__read, .updates__login {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .updates__read {
+      margin-bottom: 0.3rem;
+    }
+
+    .update__costumer, .read__more, .update__associates, .login {
+      padding: 1rem;
+    }
+
+    .update__costumer, .update__associates {
+      color: #fff;
+      font-weight: bold;
+      width: 40%;
+    }
+
+    .update__costumer {
+      background-color: #132597;
+    }
+
+    .update__associates {
+      background-color: #659AFF;
+    }
+
+    .read__more, .login {
+      background-color: #EDEDED;
+      color: #132597;
+      width: 60%;
+    }
+  }
+
+
+
