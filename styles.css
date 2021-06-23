@@ -85,13 +85,11 @@
 }
 
 .trigger__icon:before {
-  content: '\f078';
-  color: #fff;
-  transform: translateY(-50%);
+  content: url("images/arrow_down.svg");
 }
 
 .trigger__icon.active:before {
-  content: '\f077';
+  content: url("images/arrow_up.svg");
 }
 
 .first__list {
@@ -267,6 +265,7 @@ img {
   }
 
   .phone__number {
+    font-weight: bold;
     color: #787878;
     font-size: 15px;
   }
@@ -320,14 +319,21 @@ img {
       margin-right: 1rem;
     }
 
-    .navbar__content, .second__navbar__desktop, .updates {
+    .navbar__content {
       max-width: 1100px;
       margin: auto;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
 
+    .updates {
+      max-width: 1100px;
+      margin: auto;
+    }
+
     .second__navbar__desktop {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -380,6 +386,23 @@ img {
       background-color: #EDEDED;
       color: #132597;
       width: 60%;
+    }
+
+   .links__home {
+     display: flex;
+     align-items: center;
+   }
+
+   .links__home:hover {
+     text-decoration: underline;
+   }
+
+    .facebook:hover {
+      fill: #145A7C;
+    }
+
+    span .twitter:hover {
+      fill: #145A7C;
     }
   }
 
